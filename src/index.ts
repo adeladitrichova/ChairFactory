@@ -14,7 +14,7 @@ const workbook = xlsx.readFile(sourcePath)
 for (const sheetName of workbook.SheetNames) {
     const sheet = workbook.Sheets[sheetName]
     const data = xlsx.utils.sheet_to_json(sheet, {header: 1}) as NumericRow[];
-    generate({
+    const result = generate({
         worksheet: {
             name: sheetName,
             data: {
@@ -22,4 +22,5 @@ for (const sheetName of workbook.SheetNames) {
             }
         }
     })
+    console.log(result);
 }
