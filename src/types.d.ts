@@ -4,9 +4,7 @@ declare type Sheet = {
 };
 
 declare type SheetData = {
-    rows: Row[];
+    rows: NumericRow[];
 };
 
-declare type Row = {
-    cells: number[];
-};
+declare type NumericRow = number[];
