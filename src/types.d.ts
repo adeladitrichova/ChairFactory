@@ -1,8 +1,12 @@
 declare type Sheet = {
     name: string;
-    rows: Rows;
+    data: SheetData;
 };
 
-declare type Rows = {
+declare type SheetData = {
+    rows: Row[];
+};
 
+declare type Row = {
+    cells: number[];
 };
